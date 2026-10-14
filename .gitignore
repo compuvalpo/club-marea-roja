@@ -1,0 +1,21 @@
+# Dependencias
+/backend/vendor/
+/frontend/node_modules/
+
+# Entorno y datos locales
+/backend/.env
+/backend/database/database.sqlite
+/backend/storage/framework/cache/phpstan/
+/backend/.phpunit.cache/
+/backend/composer-local.*
+
+# Builds y reportes
+/frontend/dist/
+/frontend/coverage/
+/frontend/cypress/videos/
+/frontend/cypress/screenshots/
+
+# Editor / SO
+.DS_Store
+Thumbs.db
+.idea/

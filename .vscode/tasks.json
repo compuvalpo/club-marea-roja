@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "API: servidor (8080)", "type": "shell", "command": "php artisan serve --host=127.0.0.1 --port=8080", "options": { "cwd": "${workspaceFolder}/backend" }, "isBackground": true, "problemMatcher": [] },
+    { "label": "Web: Vite (5173)", "type": "shell", "command": "npm run dev", "options": { "cwd": "${workspaceFolder}/frontend" }, "isBackground": true, "problemMatcher": [] },
+    { "label": "Levantar todo", "dependsOn": ["API: servidor (8080)", "Web: Vite (5173)"], "problemMatcher": [] },
+    { "label": "PHPUnit", "type": "shell", "command": "composer test", "options": { "cwd": "${workspaceFolder}/backend" }, "group": "test", "problemMatcher": [] },
+    { "label": "Cypress (E2E)", "type": "shell", "command": "npm run e2e", "options": { "cwd": "${workspaceFolder}/frontend" }, "group": "test", "problemMatcher": [] },
+    { "label": "Calidad (lint + análisis)", "type": "shell", "command": "cd backend && composer lint && composer analyse && cd ../frontend && npm run lint && npm run format:check", "options": { "cwd": "${workspaceFolder}" }, "problemMatcher": [] }
+  ]
+}

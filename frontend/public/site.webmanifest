@@ -1,0 +1,13 @@
+{
+  "name": "Marea Roja · Club Deportivo",
+  "short_name": "Marea Roja",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#be123c",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },
+    { "src": "/brand/mark-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

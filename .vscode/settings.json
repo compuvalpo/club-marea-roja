@@ -1,0 +1,38 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [140],
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.encoding": "utf8",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.workingDirectories": ["frontend"],
+  "prettier.prettierPath": "frontend/node_modules/prettier",
+
+  "[php]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "open-southeners.laravel-pint"
+  },
+  "laravel-pint.enable": true,
+  "laravel-pint.configPath": "backend/pint.json",
+  "laravel-pint.executablePath": "backend/vendor/bin/pint",
+  "intelephense.environment.phpVersion": "8.3.0",
+  "phpstan.configFile": "backend/phpstan.neon",
+
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/storage/framework": true
+  },
+  "search.exclude": {
+    "**/dist": true,
+    "**/package-lock.json": true,
+    "**/composer.lock": true
+  },
+  "cSpell.language": "es,en"
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-label="Marea Roja · Club Deportivo">
+  <defs>
+    <linearGradient id="mrh-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e11d48"/>
+      <stop offset="1" stop-color="#9f1239"/>
+    </linearGradient>
+    <clipPath id="mrh-clip"><rect width="64" height="64" rx="14"/></clipPath>
+  </defs>
+  <g transform="translate(8 8)">
+    <rect width="64" height="64" rx="14" fill="url(#mrh-bg)"/>
+    <g clip-path="url(#mrh-clip)">
+      <circle cx="44" cy="19" r="7" fill="#ffffff"/>
+      <path d="M-4 33c7-6 13-6 19 0s12 6 18 0 12-6 18 0 9 5 17 0" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M-4 44c7-6 13-6 19 0s12 6 18 0 12-6 18 0 9 5 17 0V68H-4z" fill="#fda4af"/>
+    </g>
+  </g>
+  <text x="86" y="43" font-family="Segoe UI, Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#9f1239" letter-spacing="-0.5">Marea Roja</text>
+  <text x="88" y="64" font-family="Segoe UI, Inter, Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#64748b" letter-spacing="3">CLUB DEPORTIVO</text>
+</svg>

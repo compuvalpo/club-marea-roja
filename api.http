@@ -1,0 +1,32 @@
+### Colección para la extensión REST Client de VS Code (humao.rest-client)
+@base = http://127.0.0.1:8080/api/v1
+
+### Login (copie access_token en @token)
+# @name login
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{ "email": "admin@marea.cl", "password": "Marea2026!" }
+
+###
+@token = {{login.response.body.data.access_token}}
+
+### Dashboard
+GET {{base}}/dashboard
+Authorization: Bearer {{token}}
+
+### Prácticas de octubre
+GET {{base}}/practices?from=2026-10-01&to=2026-10-31
+Authorization: Bearer {{token}}
+
+### Morosos (cargos vencidos)
+GET {{base}}/finance/delinquents
+Authorization: Bearer {{token}}
+
+### Quiénes no han pagado este mes
+GET {{base}}/finance/delinquents?period=2026-10
+Authorization: Bearer {{token}}
+
+### Resumen financiero
+GET {{base}}/finance/summary?from=2026-01-01&to=2026-12-31
+Authorization: Bearer {{token}}
