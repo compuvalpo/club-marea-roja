@@ -4,11 +4,15 @@
 
 # Marea Roja · Sistema de administración deportiva
 
-Aplicación web para administrar un club deportivo: **finanzas** (mensualidades, pagos, morosos, ingresos,
-egresos y gastos fijos), **prácticas** regulares en un calendario, **eventos** ocasionales en distintos recintos
-y **estadísticas** de los alumnos. Tiene cuatro roles: Administrador, Entrenador, Apoderado y Alumno.
+Aplicación web para administrar un club deportivo
+Principales funcionalidades:
+**Finanzas**: registro de ingresos, egresos, gastos fijos y mensualidades (pagadas y pendientes).
+**Prácticas**: registro regulares de prácticas, que permite calendarizar las actividades.
+**Eventos**: se pueden agregar eventos ocasionales en distintos recintos.
+**Estadísticas**: permite registrar y ver las estadisticas de los alumnos.
+**Roles**: Administrador, Entrenador, Apoderado y Alumno.
 
-Esta guía explica, **paso a paso y para Windows 10/11**, cómo instalar todo lo necesario y poner el sitio en marcha.
+Esta guía explica cómo instalar todo lo necesario para poner el sitio en marcha en local, **para Windows 10/11**,.
 No necesita experiencia previa: cada comando se muestra tanto para **CMD** como para **PowerShell**.
 
 ---
@@ -374,12 +378,10 @@ Es útil si trabaja en otros proyectos que requieren versiones distintas. En Win
    nvm use lts
    ```
 
-   Si `nvm use lts` no es reconocido por su versión de NVM, use el número exacto que muestra `nvm list available`,
-   por ejemplo `nvm install 24.11.0` y luego `nvm use 24.11.0`.
+Si `nvm use lts` no es reconocido por su versión de NVM, use el número exacto que muestra `nvm list available`,
+por ejemplo `nvm install 24.11.0` y luego `nvm use 24.11.0`.
 
-6. Compruebe con `node -v` y `npm -v` (ver más abajo).
-
-Comandos útiles de NVM:
+6. Comandos útiles de NVM:
 
 | Comando | Qué hace |
 |---------|----------|
@@ -395,10 +397,9 @@ Comandos útiles de NVM:
 
 ```bat
 node -v
-npm -v
 ```
 
-Debe ver, por ejemplo, `v24.x.x` y `11.x.x`. Se requiere Node **20 o superior**.
+Debe ver, por ejemplo, `v24.x.x`.
 
 ### Solo PowerShell: permitir la ejecución de `npm`
 
@@ -451,16 +452,29 @@ Get-Command php, composer, node | Select-Object Name, Source
 
 ## 8. Instalar el proyecto
 
-En los ejemplos, el proyecto está en `Documentos\git\PMO\web`. Si lo tiene en otra carpeta, cambie la ruta.
+### Obtener el código fuente
+Clonar el proyecto con el comando:
+```bash
+git clone https://github.com/compuvalpo/club-marea-roja.git
+```
+<https://www.youtube.com/shorts/kRfzz1qk6mM>
+
+En los ejemplos, el proyecto está en `Documentos\git\club-marea-roja`. 
+**Si lo tiene en otra carpeta, cambie la ruta.**
 
 > **Tip:** en el Explorador de archivos puede abrir la carpeta, hacer clic en la barra de direcciones, escribir
 > `cmd` (o `powershell`) y presionar <kbd>Enter</kbd>: se abre una terminal ya ubicada en esa carpeta.
+
+### Obtener el código fuente mediante GitHub Desktop
+Puedes utilizar GitHub Desktop para clonar el repositorio
+Descargar GitHub Desktop desde https://desktop.github.com/download/ y sigue las indicaciones del siguiente video
+<https://www.youtube.com/watch?v=2MG-0D-Jyc8>
 
 ### 8.1 Backend (API Laravel)
 
 *CMD:*
 ```bat
-cd /d "%USERPROFILE%\Documents\git\PMO\web\backend"
+cd /d "%USERPROFILE%\Documents\git\club-marea-roja\backend"
 composer install
 copy .env.example .env
 php artisan key:generate
@@ -471,7 +485,7 @@ php artisan migrate:fresh --seed
 
 *PowerShell:*
 ```powershell
-cd "$HOME\Documents\git\PMO\web\backend"
+cd "$HOME\Documents\git\club-marea-roja\backend"
 composer install
 Copy-Item .env.example .env
 php artisan key:generate
@@ -498,13 +512,13 @@ Qué hace cada comando:
 
 *CMD:*
 ```bat
-cd /d "%USERPROFILE%\Documents\git\PMO\web\frontend"
+cd /d "%USERPROFILE%\Documents\git\club-marea-roja\frontend"
 npm install
 ```
 
 *PowerShell:*
 ```powershell
-cd "$HOME\Documents\git\PMO\web\frontend"
+cd "$HOME\Documents\git\club-marea-roja\frontend"
 npm install
 ```
 
@@ -521,13 +535,13 @@ No las cierre mientras use el sistema.
 
 *CMD:*
 ```bat
-cd /d "%USERPROFILE%\Documents\git\PMO\web\backend"
+cd /d "%USERPROFILE%\Documents\git\club-marea-roja\backend"
 php artisan serve --host=127.0.0.1 --port=8080
 ```
 
 *PowerShell:*
 ```powershell
-cd "$HOME\Documents\git\PMO\web\backend"
+cd "$HOME\Documents\git\club-marea-roja\backend"
 php artisan serve --host=127.0.0.1 --port=8080
 ```
 
@@ -535,13 +549,13 @@ php artisan serve --host=127.0.0.1 --port=8080
 
 *CMD:*
 ```bat
-cd /d "%USERPROFILE%\Documents\git\PMO\web\frontend"
+cd /d "%USERPROFILE%\Documents\git\club-marea-roja\frontend"
 npm run dev
 ```
 
 *PowerShell:*
 ```powershell
-cd "$HOME\Documents\git\PMO\web\frontend"
+cd "$HOME\Documents\git\club-marea-roja\frontend"
 npm run dev
 ```
 
