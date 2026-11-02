@@ -467,8 +467,9 @@ En los ejemplos, el proyecto está en `Documentos\git\club-marea-roja`.
 
 ### Obtener el código fuente mediante GitHub Desktop
 Puedes utilizar GitHub Desktop para clonar el repositorio
-Descargar GitHub Desktop desde https://desktop.github.com/download/ y sigue las indicaciones del siguiente video
-<https://www.youtube.com/watch?v=2MG-0D-Jyc8>
+Descargar GitHub Desktop desde https://desktop.github.com/download/
+Sigue las indicaciones del siguiente video <https://www.youtube.com/watch?v=2MG-0D-Jyc8>
+
 
 ### 8.1 Backend (API Laravel)
 
