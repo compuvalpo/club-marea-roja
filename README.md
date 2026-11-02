@@ -452,7 +452,7 @@ Get-Command php, composer, node | Select-Object Name, Source
 
 ## 8. Instalar el proyecto
 
-### Obtener el código fuente
+### Obtener el código fuente (mediante comandos GIT)
 Clonar el proyecto con el comando:
 ```bash
 git clone https://github.com/compuvalpo/club-marea-roja.git
@@ -465,7 +465,7 @@ En los ejemplos, el proyecto está en `Documentos\git\club-marea-roja`.
 > **Tip:** en el Explorador de archivos puede abrir la carpeta, hacer clic en la barra de direcciones, escribir
 > `cmd` (o `powershell`) y presionar <kbd>Enter</kbd>: se abre una terminal ya ubicada en esa carpeta.
 
-### Obtener el código fuente mediante GitHub Desktop
+### Obtener el código fuente (mediante GitHub Desktop)
 Puedes utilizar GitHub Desktop para clonar el repositorio
 Descargar GitHub Desktop desde <https://desktop.github.com/download/>
 
